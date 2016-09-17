@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 1505-handout.aux
+The style file: cbe.bst
+Database file #1: rnr.bib
+Warning--I didn't find a database entry for "Muchonis:1985"
+Warning--I didn't find a database entry for ""
+Warning--can't use both author and editor fields in Chomsky:2000
+Warning--empty chapter and pages in Chomsky:2000
+Warning--empty year in Citko:rnr
+You've used 46 entries,
+            2016 wiz_defined-function locations,
+            774 strings with 9776 characters,
+and the built_in function-call counts, 14841 in all, are:
+= -- 1442
+> -- 394
+< -- 51
++ -- 124
+- -- 115
+* -- 1208
+:= -- 2633
+add.period$ -- 141
+call.type$ -- 46
+change.case$ -- 272
+chr.to.int$ -- 45
+cite$ -- 49
+duplicate$ -- 656
+empty$ -- 1101
+format.name$ -- 175
+if$ -- 2884
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 44
+newline$ -- 233
+num.names$ -- 142
+pop$ -- 209
+preamble$ -- 1
+purify$ -- 285
+quote$ -- 0
+skip$ -- 498
+stack$ -- 0
+substring$ -- 980
+swap$ -- 156
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 262
+warning$ -- 3
+while$ -- 119
+width$ -- 0
+write$ -- 565
+(There were 5 warnings)

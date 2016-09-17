@@ -1,0 +1,1085 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Templatee
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTempl ates.com
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TYPESET IN DVI TO USE ARROWS IN QTREE
+%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=letter, fontsize=12pt]{scrartcl} % A4 paper and 11pt font size
+\usepackage{etex}
+\usepackage[paperwidth=8.5in, paperheight=11in, top=1in, bottom=1in, left=1in, right=1in]{geometry} % Specify page dimensions
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{multicol}
+
+\usepackage[normalem]{ulem} % for strikeout sout
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\fontseries{}
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\linespread{1.05} % line spacing
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\normalfont} % Make all sections centered, the default font and small caps
+\subsectionfont{\normalfont} % Make all sections centered, the default font and small caps
+\subsubsectionfont{\large\normalfont\textit} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead[L]{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{.5pt}
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+\fancypagestyle{firststyle}
+{
+   \fancyhf{}
+   \fancyfoot[R]{\thepage} % Page numbering for right footer
+}
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % At 0pt, Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage[none]{hyphenat} %% avoid line-end hyphenation
+
+\usepackage{color}
+
+\usepackage{natbib}  %% YES THIS IS THE FINAL VERSION
+\bibpunct{(}{)}{,}{a}{}{,} 	%%% style for bib
+\setcitestyle{notesep={: }}	%%% colon between reference and page number 
+
+%----%
+% LINGUISTICS PACKAGES
+%----%
+\usepackage{textgreek} % Greek without going into math eg textDelta
+\usepackage{color}
+
+
+
+\usepackage{pstricks,pst-xkey,pst-jtree}
+%\usepackage{avm}
+\usepackage{rtrees}
+\usepackage{xytree}
+\usepackage{qtree}
+\usepackage{tree-dvips} %% TYPESET IN DVI TO USE ARROWS IN QTREE
+\usepackage{tipa} %% IPA characters
+\usepackage{forest}
+\forestset{qtree edges/.style={for tree=
+    {parent anchor=south, child anchor=north}}}
+\usepackage{gb4e} %% numbered examples, this package must be last
+%\avmfont{\sc}
+%\avmvalfont{\it}
+%\avmoptions{active}
+%\newcommand{\symb}[2]{%
+%  \begin{tabular}{c}
+%    \normalsize{#1} \\ 
+%    \footnotesize{#2}
+%  \end{tabular}}
+%\newcommand{\opt}[1]{\ensuremath{\left(#1\right)}}
+%\newcommand{\ra}{\ensuremath{\rightarrow}}
+%\newcommand{\ua}{\ensuremath{\uparrow}} 
+%\newcommand{\da}{\ensuremath{\downarrow}} 
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+%LING 507 - Syntax Theory I \\ [20pt] % Your university, school and/or department name(s)
+\LARGE{Breaking Idioms with Right Node Raising} \\ [5pt] % The assignment title
+\normalsize{\textbf{Brent Woo}} \\
+\normalsize{University of Washington} \\
+\normalsize{\tt{bwoo@uw.edu}} \\
+\normalsize BCGL 8: The Grammar of Idioms - 5 June, 2015
+%Dec 9, 2013 \\
+\date{}
+\horrule{0.5pt}
+\vspace{-10ex} \\ % Thick bottom horizontal rule
+}
+
+
+%\includeonly{secondfile} %% Include only one section
+
+\begin{document}
+
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+\thispagestyle{empty}
+
+%\tableofcontents
+
+%{\LARGE Section 1: Introduction - background}
+
+
+%\nocite{*} % ensures all citations show up in bibliography regardless of use
+
+
+
+
+%\jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+%    \def\\{[labelgapb=-4pt]}%
+%    \def\V{$\rm \overline V$}%
+%    \! = {S}
+%       <wideleft>{S}!a ^<vert>{and} ^<wideright>{S}
+%       :({NP}<shortvert>{Mary}) {\V}@A2
+%       :({V}\\{filled}) 
+%       [scaleby=3 1,branch=\blank]{NP}@A3 !b .
+%    \!a = :({NP}<shortvert>{John}) {\V}@A1
+%       <left>{V}\\{kicked}.
+%    \!b = <vartri>{the bucket}.
+%    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+%    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+%    \endjtree
+%    
+%    \jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+%    \def\\{[labelgapb=-4pt]}%
+%    \def\V{$\rm \overline V$}%
+%    \! = {S}
+%       <wideleft>{S}!a ^<vert>{and} ^<wideright>{S}
+%       :({NP}<shortvert>{Mary}) {\V}@A2
+%       :({V}\\{filled}) {NP} !b .
+%    \!a = :({NP}<shortvert>{John}) {\V}@A1
+%       <left>{V}\\{kicked}.
+%    \!b = <vartri>{the bucket}.
+%    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+%    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+%    \endjtree
+%
+%
+%    \jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+%    \def\\{[labelgapb=-4pt]}%%
+%    \def\V{$\rm \overline V$}%
+%    \! = {S}
+%       <wideleft>{S}!a ^<vert>{and} ^<wideright>{S}
+%       :({NP}<shortvert>{Mary}) {\V}@A2
+%       :({V}\\{filled}) {NP} <vartri>{the bucket} .
+%    \!a = :({NP}<shortvert>{John}) {\V}@A1
+%       :({V}\\{kicked}) {NP} <vartri>{{\color{gray} the bucket}} .
+%    \endjtree
+%
+%\jtree[xunit=3em,yunit=1.5em]
+%\def\scaleA{[scaleby=1.6 1]}%
+%\def\scaleB{[scaleby=.6 1,doubleline=true,doublesep=.1ex]}%
+%\def\mkovalnode{\rput(-1ex,-.8)
+%{\ovalnode[framesep=\psxunit]{K}{\hskip2em}}}%
+%\! = {$\rm Agr’$}
+%:\scaleA{Agr}!a \scaleA{\bf VP}
+%<vert>[linestyle=dashed,linewidth=1pt]{\bf V}
+%:{${\rm [_V\,e]}_i$}@A1 {T}.
+%\!a = :{V$_i$}!b {Agr}
+%<vert>{[e]$_j$}@A2 .
+%\!b = {\omit\mkovalnode}
+%:\scaleB{${\rm [_{Agr}\,Agr]}_j$}@A3 \scaleB{$\rm [_T\,T]$}.
+%\psset{angleA=-90,angleB=-45,arrows=->}
+%\nccurve[nodesepB=0]{A1}{K}
+%\nccurve[ncurv=1.3]{A2}{A3}
+%\endjtree
+%The difficulty in
+    
+    
+    
+\section{Overview}
+
+\begin{exe}
+\ex \textbf{Right Node Raising} (RNR)
+\\ John wrote, and Mary reviewed, \textit{a paper on verbs}.
+\\ \hspace*{5pt} conjunct \hspace*{20pt} conjunct \hspace*{50pt} pivot
+\end{exe}
+
+\textbf{Analyses of RNR}:
+
+
+\begin{exe}
+\ex \textit{Across-the-board Movement} \\
+	\xytext{	\xybarnode{John wrote} & 
+				\xybarnode{[a paper on verbs],}\xybarconnect[4][->](D,D){3} & 					\xybarnode{and Mary reviewed} & 
+				\xybarnode{[a paper on verbs],}\xybarconnect[4][->](D,D){1} &
+				\xybarnode{[a paper on verbs].}}
+\ex \textit{Ellipsis} \\
+	John wrote \sout{a paper on verbs}, and Mary reviewed, a paper on verbs.
+\ex \textit{Multidominance} \\
+	John wrote \_, and Mary reviewed \_, \textit{a paper on verbs}.
+\end{exe}
+
+\textbf{Problem}: (\ref{id1x}) has an idiomatic interpretation. (\ref{id1a}) does not.
+
+\begin{exe}
+\ex \begin{xlista}
+	\ex[]{John \uline{kicked the bucket}. \\ ('John died')}\label{id1x}
+	\ex[$\ominus$]{John \uline{kicked}, and Mary filled, \uline{\textit{the bucket}}. \\ ("did John die..?")}\label{id1a}
+		\end{xlista}
+\end{exe}
+
+We know idioms can undergo syntactic transformations and maintain idiomaticity (\citealt{Fraser:1970,Machonis:1985,Gibbs:1989a}), but not much is written on the interaction of idioms and RNR.
+
+\textbf{Questions}
+
+\begin{itemize}
+\item \textbf{Primary}: What can we learn about idioms from Right Node Raising? How can RNR be used as a test for \textit{analyzability} (decomposability)?
+\item \textbf{Secondary}: What can we learn about the structure of RNR from idioms? Can idioms be used to distinguish between the major analyses of the structure of RNR?
+\end{itemize}
+
+
+
+
+\fbox{\parbox{0.90\linewidth}{
+\textbf{Notation} \\
+\vspace{15pt}
+(i) $\ominus$ John \uline{kicked}, and Mary filled, \uline{\textit{the bucket}}. \\ $\ominus$ = does not have idiomatic interpretation (i.e., literal only) \\
+$\oplus$ = does have idiomatic interpretation (i.e., literal + idiom) \\
+\uline{tabs} = idiomatic elements are underlined
+}}
+\vspace{15pt}
+
+
+%\textbf{A gut-reaction explanation}
+%
+%\begin{itemize}
+%\item \textit{Discontinuity hypothesis (DH_0)}: all parts of the idiom must be adjacent on the surface
+%\item \textit{Reject DH_0}: certain well-known movements (e.g.,\ raising) that cause surface discontinuity do not automatically destroy idiomatic interpretation
+%\end{itemize}
+%
+%\begin{exe}
+%\ex\label{id1b} \uline{The cat} seemed to be \uline{out of the bag}.
+%\end{exe}
+
+%\textbf{Idea}: I argue that an the unavailability of idiomatic interpretation in sentences like (\ref{id1a}) is evidence that RNR is derived through multidominance, with a pivot that is multiply-dominated, and not ellipsis or movement.
+
+%\include{background}
+%\include{idioms}
+%\include{appendix}
+
+
+
+%\begin{itemize}
+%\item \textbf{Some Definitions for RNR in the literature}
+%\begin{itemize}
+%\item "...involves a right-peripheral element that is shared by two or more phrases ... certain elements flanking the RNRaised material are usually contrasted and convey new information." \cite[p. 834]{Chaves:2014}
+%\item "Our understanding of ellipsis in RNR and Gapping is that the conjuncts of these bisentential coordinations contain certain elements which lack a phonetic matrix \uline{as a consequence of deletion}, but which otherwise have complete syntactic and semantic content." \citep{Fery:2005}
+%\item "RNR is the phenomenon in which there is a gap in final position of the non-final conjunct(s) of a coordination whose interpretation is determined by material overtly realized in the final conjunct of the coordination." \citep{Valmala:2013}
+%\item "RNR is a construction formed normally under coordination, where a gap appears in the first conjunct ... It appears as if a single constituent has simultaneously \uline{moved out} of each conjunct to the right edge of the sentence." \citep{Ha:2008}
+%\end{itemize}
+%\end{itemize}
+%
+%\begin{itemize}
+%	\item Some authors (unwittingly) advance their analysis in the definition (e.g., Fery)
+%	\item Many authors include coordination as definitional to RNR (e.g., all above except Chaves). RNR seems to extend beyond coordination:
+%\end{itemize}
+%
+%\begin{exe}
+%\ex\label{rnr-while} Andres supported, while Marlyse protested, the new resolution on pronouns.
+%\end{exe} 
+%
+%I adapt the definition from \citealt{Sabbagh:2014}, which defines RNR on the basis of two properties: 
+%
+%\begin{exe} 
+%\ex \textbf{Properties of RNR}
+%	\begin{xlista}
+%	\ex\label{RNRproperty1} all conjuncts but the final one in a sentence contain a gap, and these gaps are associated with overt material in the final conjunct.	
+%	\ex\label{RNRproperty2} the gaps are always right-peripheral in their respective conjuncts, a property known as the \textit{Right Edge Condition}.
+%	\end{xlista}
+%\end{exe}	
+%
+%The first property (\ref{RNRproperty1}) is illustrated by the sentences below, which show typical RNR constructions:
+%
+%\begin{exe}
+%\ex\label{rnr1} John devoured, Mary frosted, and Ted baked, two cakes made with carrots.
+%\ex\label{rnr2} So I work with, and used to date, a woman named Lana.\footnote{\textit{Archer}, FX. Season 6, Episode 1.}
+%\ex\label{rnr3} Both of my kids go crazy over, and demand to be given, frozen peas whenever I take any out of the freezer to cook.\footnote{Leanne Rolston, p.c.}
+%\end{exe}
+%
+%(\ref{rnr1}) shows RNR can apply with more than two (in principle unlimited) conjuncts.
+%
+%The second property (\ref{RNRproperty2}) is known as the \textit{Right Edge Condition} (definition below from \citealt{Wilder:1999}):
+%
+%\begin{exe}
+%\ex\label{rec} \textbf{Right Edge Condition}\footnote{Data from languages with SOV word order challenge the status of the Right Edge Condition as a typologically-grounded generalization for RNR. For example, \cite{Ince:2008} gives the following examples of RNR in Turkish:
+%
+%\begin{exe}
+%\ex \begin{xlista}
+%	\item\label{hasan1}\gll Hasan \__1 pi\c{s}irdi, Mehmet \__1 yedi \textit{bal{\i}\u{g}{\i}}_1.\\
+%		      {} {} cooked {} {} ate fish\\
+%		 \glt `Hasan cooked and Mehmet ate the fish.'
+%	\item\label{hasan2} * Hasan \__1 pi\c{s}irdi, Mehmet bal{\i}\u{g}{\i}_1 yedi.\hspace*{\fill} (Turkish, \citealt[p.11]{Ince:2008})
+%	\end{xlista}
+%\end{exe}
+%
+%The sentence in (\ref{hasan1}) shows that RNR in Turkish, while obeying the first property of RNR in (\ref{RNRproperty1}) that the gaps be associated with the pivot in the final conjunct \textit{bal{\i}\u{g}{\i}}, flouts the Right Edge Condition. The gaps are not right-peripheral in their respective conjuncts, yet the sentence is grammatical. Data from other SOV languages like Korean \citep{An:2007} and Japanese \citep{Nakao:2010} show similar patterns. } \\
+%	In RNR, where \textalpha\ is the pivot: if \textalpha\ surfaces in the \textit{final} conjunct, gap(s) corresponding to \textalpha\ must be at the \textit{right edge} of their non-final conjuncts.
+%\end{exe}
+%
+%This property of RNR distinguishes the grammatical (\ref{rec-1}) from the ungrammatical (\ref{rec-2}), where underscores indicate the "gaps" associated with the pivot:
+%
+%\begin{exe}
+%\ex\begin{xlista}
+%	\ex[]{John has bought \_, and Mary will read, \textit{the paper}.}\label{rec-1}
+%	\ex[*]{John can \_ your book, and Mary will \textit{read} the paper. \citep[p.11]{Wilder:1999}}\label{rec-2}
+%	\end{xlista}
+%\end{exe}
+
+
+
+
+\section{Behavior of idioms in RNR}
+
+Idioms usually lose their idiomatic interpretation when in a right node raising configuration. Consider the example below.
+
+\begin{exe}
+		\ex[$\oplus$]{Chad \uline{kicked the bucket}.}\label{id1-pre}
+		\ex[$\ominus$]{Chad \uline{kicked}, and Megan filled, \textit{\uline{the bucket}.}}\label{id1}
+\end{exe}
+
+More examples. In each of these cases, the only available interpretation for the sentence as a whole is a completely literal one. RNR blocking idiomatic interpretation never results in ungrammaticality.
+
+\begin{exe}
+		
+\ex First conjunct is idiomatic, second is literal
+	\begin{xlista}
+		\ex[$\ominus$]{Chad \uline{kicked}, and Megan filled, \textit{\uline{the bucket}.}}\label{id1eeeee}
+		\ex[$\ominus$]{I heard that Ursula \uline{kicked}, and my cousin's friend filled, \uline{\textit{the bucket}}.}\label{idli-bucket}
+		\ex[$\ominus$]{Erick must not \uline{let the cat} , but it doesn't matter whether Tomas will let the dog, \uline{\textit{out of the bag}}.}\label{idli-cat}
+		%\ex[$\ominus$]{Orin is extremely skilled at playing devil's, but Devin is even better at playing Mary's, \textit{advocate}.}
+		%\ex[$\ominus$]{Hanging up on telemarketers is like taking candy, but hanging up on mom is like taking milk, \textit{from a baby}.}
+		\ex[$\ominus$]{Linda was afraid she was next to \uline{get}, but her boss forgot, \uline{\textit{the axe}}.}\label{idli-axe}
+		\ex[$\ominus$]{Tyler is dreading that he'll have to \uline{face}, while Mary can't wait to listen to, \uline{\textit{the music}}.}\label{idli-music}
+		\ex[$\ominus$]{Kendra is the one who \uline{brings home}, but Marco is better at cooking, \uline{\textit{the bacon}}.}\label{idli-bacon}
+				\ex[$\ominus$]{You should know that \uline{Elvis has left}, but John has entered, \uline{\textit{the building}}.}
+		%\ex[$\ominus$,\#]{Mary saved, and John made an about-, \textit{face}. (plus you have the conflicting POS requirements, one's a word, the other is sub-word) \footnote{from David I.}}
+	\end{xlista}
+\end{exe}
+
+These examples below show that directionality is not a factor, that is, in the flipped case where the second conjunct is idiomatic and the first is not, the idiomatic interpretation is still blocked.
+
+\begin{exe}
+\ex First conjunct is literal, second is idiomatic
+\begin{xlista} 
+		\ex[$\ominus$]{Megan filled, and Chad \uline{kicked}, \textit{\uline{the bucket}.}}
+		\ex[$\ominus$]{Eugene bought, and Rupa \uline{cut}, \uline{\textit{the cheese}}.}\label{cut-cheese}
+		\ex[$\ominus$]{The junior senator only managed to set the Thames, but the senior senator successfully \uline{set the world}, \uline{\textit{on fire}}.}
+\end{xlista}
+\end{exe}
+ 
+The idioms are 'continuous' (\textit{modulo} comma/prosody) but only literal.
+
+\newpage
+
+\subsection{Some ideas to consider}
+
+\textbf{It's not just discontinuity}: Raising, passives, parentheticals etc. do not usually block idiomatic interpretation\footnote{Depending on the type of idiom though. [$\ominus$] The bucket was kicked by John. \citep{Machonis:1985}}: 
+
+\begin{exe}
+\ex[]{\uline{The cat} seems to \uline{be out of the bag}.}
+\ex[]{\uline{The cat} was \uline{let out of the bag}.}
+\ex[]{\uline{The cat}, unfortunately, through a lapse of judgment, seems to have been \uline{let out of the bag}.}\label{cat-long}
+\end{exe}
+
+
+
+
+\textbf{It's not just RNR}: Another way RNR can interact with idioms is if the entire idiom is contained in the pivot. The idiomatic interpretation is possible:
+
+
+\begin{exe}
+	\ex[$\oplus$]{John thought that Mary, while Tim thought that Peter, \uline{\textit{kicked the bucket}}.}\end{exe}
+
+This shows that it isn't simply in the presence of RNR that we lose idiomatic interpretation, that only happens in the cases above where a subpart of the idiom is in the pivot.
+
+\vspace{15pt}
+
+\textbf{It happens cross-linguistically}: 
+
+This example in Japanese from \cite{Kubota:2015} more closely mirrors our English data, where idioms in RNR are grammatical, but only literal.
+
+\begin{exe}
+\ex[$\oplus$]{\gll Isya-wa sazi-o nage-ta. \\
+			doctor-\sc{top} spoon-\sc{acc} throw-\sc{past} \\
+		\glt 'The doctor threw a spoon' ($\oplus$ 'The doctor gave up') \hspace*{\fill} \cite[7]{Kubota:2015}}
+\ex[$\ominus$]{\gll Isya-wa sazi-o, soshite kanzya-wa sara-o, \textit{nage-ta}. \\
+			doctor-\sc{top} spoon-\sc{acc} {} and patient-\sc{top} plate-\sc{acc} {} throw-\sc{past} \\
+		\glt 'The doctor (threw) a spoon, and the patient threw a plate.' \\ (int. 'The doctor gave up, and the patient threw a plate.')
+}
+\end{exe}
+
+
+\newpage
+\section{Background}
+
+\subsection{Theoretical Background}
+
+
+\begin{itemize}
+\item I adopt the basic assumptions of the Minimalist program as described below and proposed in \cite{Chomsky:1995,Chomsky:2000,Chomsky:2001}. 
+%\item Y-model of grammar: lexicon feeds computational system that assembles phrase structures, which are transmitted to the speech and thought systems. All information transmitted to the systems must be legible (interpretable).
+\item Basic operations: {\sc merge} and {\sc agree}. {\sc Agree} values features so they are legible to the interfaces. {\sc Merge} has \textit{three} subcases:
+	\begin{itemize}
+		\item External Merge: combines object A with B, where B is outside A
+		\item Internal Merge (Move): combines A with B, where B is inside A \cite[12]{Chomsky:2005}\footnote{About phases: where \textdelta\ is an internally [re]merged (moved) constituent: "... the question arises how the actual spelling out of \textdelta\ within the lower cycle can be prevented .. the information that \textdelta\ has another, dominated parent, which would lead to [exemption from linearization] is no longer present after transfer [in the lower cycle] ... introduction of cycles in PF is highly problematic under a remerge account of displacement." (de Vries 2009: 390)}
+		\item Parallel Merge: combines A with B, where B is inside distinct object C \citep{Citko:2005}
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Multidominance}
+
+Parallel Merge makes possible multidominant, multi-rooted structures. In this paper I reserve the term "multidominance" or "multidominant structures" for structures created as a result of Parallel Merge (even though moved constituents, as a result of Internal Merge are also dominated by multiple mothers).
+
+An operation of Parallel Merge is a two-step process, as described in \citet{Citko:2011}:
+
+\begin{multicols}{2}
+
+\begin{exe}
+\ex Merge(A,C) \\
+\begin{forest}
+qtree edges
+[A  [A ] [C, name=C ]]
+\end{forest}
+\end{exe}
+
+\columnbreak
+
+\begin{exe}
+\ex Merge(B,C) \\ \begin{forest}
+qtree edges
+[, no edge 
+[A, no edge  [A] [C, name=C ]]
+   [B, name=A2, no edge  [, no edge ] [B ]]]
+\draw (A2.south) -- (C.north);
+\end{forest}
+\end{exe} 
+
+\end{multicols}
+
+
+\textbf{Linearization of multidominant structures}
+
+\cite{Wilder:1999}: the Linear Correspondence Axiom \citep{Kayne:1994} as it stands cannot linearize any multiple dominance trees (p. 9).
+
+\begin{exe}
+\ex 
+\begin{forest}
+qtree edges
+[Q,name=X [A  [c ] [\textalpha, name=C ]]
+   [B, name=A2  [, no edge ] [d ]]]
+\draw (A2.south) -- (C.north);
+\end{forest}
+\end{exe}
+
+\textalpha\ will end up preceding itself, violating the reflexivity condition in the LCA. Wilder proposes the following modification:
+
+\begin{exe}
+\ex \textbf{Sharing}: \textalpha\ is shared by X and Y iff (i) neither of X and Y dominates the other, and (ii) both X and Y dominate \textalpha\ .
+\ex \textbf{Full dominance}: X fully dominates \textalpha\ iff X dominates \textalpha\ and X does not share \textalpha\ .
+\ex\label{wilderlca} \textbf{Wilder's modification to the LCA} \\
+	d(X) = the (unordered) set of terminals \textit{fully dominated} by X
+\end{exe}
+
+Let's examine how this works with a concrete example of linearizing RNR as MD. Here is the structure Wilder gives for a sentence containing RNR (assuming MD):
+
+\begin{exe}
+\ex\label{rnrwilder} RNR as MD: Structure given in Wilder 1999: p. 11, ex. 35 \\
+\textit{John has bought, and Mary will read, the paper} \\
+\begin{forest}
+qtree edges
+[\&P
+[TP_1 [SUB_1 [John,triangle]] [$\overline{T}$_1 [T_1 [has]] [VP_1,name=VP1 [V_1 [bought]] [, no edge]] ] ]
+[$\overline{\&}$ [\& [and]]
+   [TP_2  [SUB_2 [Mary,triangle]] [$\overline{T}$_2 [T_2 [will]] [VP_2 [V_2 [read]] [OBJ,name=OBJ [the paper,triangle]] ] ]]]]
+\draw (VP1.south) -- (OBJ.north);
+\end{forest}
+\end{exe}
+
+By the modified LCA in (\ref{wilderlca}), the terminals \textit{the, paper} are excluded from the \textit{image} of both TP_1 and TP_2, because these terminals are not fully dominated by either TP_1 or TP_2. The asymmetric c-command pairs inside TP_1 and inside $\overline{\&}$, respectively are as follows:
+
+\begin{exe}
+\ex \begin{xlista}
+	\ex John<has<bought<the<paper
+	\ex and<Mary<will<read<the<paper
+	\end{xlista}
+\end{exe}
+
+These are simply the set of c-command relations, not yet the \textit{image} showing linear precedence, so the LCA conditions do not apply yet. To obtain the image of \&P, we have to order (a) and (b) above. because TP_1 itself asymmetrically c-commands all the daughters of $\overline{\&}$, all the daughters of TP_1 in (a), except \textit{the paper}, precede the daughters of $\overline{\&}$. This results in the correct RNR linear order:
+
+\begin{exe}
+\ex (John, has, bought) < (and, Mary, will, read, the, paper)
+\end{exe}
+
+In this paper I will assume this linearization strategy.\footnote{A second problem related to the linearization of multidominance structures is: how can we distinguish between multidominance structures created as a result of parallel merge, and those created as a result of internal merge? This problem is tackled by \cite{Vries:2009}.}
+
+
+\newpage
+\subsection{Multidominance approach to RNR}
+
+\textbf{Analyses}: \citealt{McCawley:1982,Wilder:1999,Vos:2005,Gracanin:2007,Johnson:2007,Bachrach:2009,Grosz:2015,Kluck:2009,Vries:2009}, \citealt{Citko:2011}, Citko (to appear), among others
+
+%Abels:2004,Cheng:2009,,Vries:2010,Vries:2013
+
+\textbf{Outline}: just one instance of the pivot that is combined with every conjunct simultaneously.
+
+\begin{exe}
+\ex A multidominance analysis of RNR \\ \textit{John wrote, and Mary reviewed, a paper on verbs} \\
+\jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {\&P}
+       <wideleft>{TP}!a ^<vert>{and} ^<wideright>{TP}
+       :({DP}<vartri>{Mary}) {VP}@A2
+       :({V}\\{reviewed})
+       [scaleby=3 1,branch=\blank]{DP}@A3 !b .
+     \!a = :({DP}<vartri>{John}) {VP}@A1
+       <left>{V}\\{wrote}.
+    \!b = <vartri>{a paper on verbs}.
+    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+    \nccurve[angleB=135,ncurvA=.5,ncurvB=2.6]{A1:b}{A3:t}
+    \endjtree
+\end{exe}
+
+\vspace{20pt}
+\textbf{Evidence in favor of a multidominance approach to RNR} 
+
+\textbf{Relational modifiers}: if the pivot in RNR contains a relational adjective, like \textit{same} or \textit{different}, an internal reading obtains (Abbot 1976)
+
+\begin{exe}
+\ex\label{ellip-int1} John whistled, and Mary sang, the same tune.
+\end{exe}
+
+The sentence underlying RNR in ellipsis analyses does not license internal readings:
+
+\begin{exe}
+\ex\label{ellip-int2} John whistled \sout{the same tune}, and Mary sang the same tune.
+\end{exe} 
+
+
+
+\textbf{Summative agreement}: A second problem for ellipsis is the observation in Postal 1998 that the pivot usually contains summative agreement:
+
+\begin{exe}
+\ex Alice is happy that Beatrix, and Clair is proud that Diana, have (*has) traveled to Cameroon. (Grosz 2009)
+\end{exe}
+
+This is unexplainable under ellipsis accounts where the individual conjuncts would have singular agreement, as illustrated with the potential underlying sentence below:
+
+\begin{exe}
+\ex Alice is happy that Beatrix \textit{has} traveled to Cameroon, and Clair is proud that Diana \textit{has} traveled to Cameroon.
+\end{exe}
+
+
+
+\subsection{Bruening's 2010 analysis of idiomatic interpretation}
+
+
+\textbf{Bruening's (2010) formal analysis of idioms}: the following constraints on the availability of idiomatic interpretation for a given multiword expression, given below:
+
+\begin{exe}
+\ex\label{idrule1} \textit{The Principle of Idiomatic Interpretation} \\ X and Y may be interpreted idiomatically only if X selects Y \hspace*{\fill} (p. 532)
+\ex\label{idrule2} \textit{Constraint on Idiomatic Interpretation} \\ If X selects a lexical category Y, and X and Y are interpreted idiomatically, all of the selected arguments of Y must be interpreted as part of the idiom that includes X and Y.
+\ex\label{idrule3} Lexical categories are V, N, A, Adv.\footnote{Bruening rejects the Universal DP hypothesis and represents the structure of noun phrases with NP. For this paper I am going to proceed assuming all noun phrases are NP for the purposes of the idiom principles, but this assumption must be examined.}
+\end{exe}
+
+
+\begin{exe}
+\ex\label{idex2} A structure for \textit{kick the bucket} \\
+\jtree[xunit=2.8em,yunit=1em]
+\! = {vP}
+	:{v} {VP}
+	:({V}<vert>{kick}) ({NP}<tri>{the bucket}).
+\endjtree
+\end{exe}
+
+this idiom satisfies (\ref{idrule1}), and the combination of V and DP \textit{kick the bucket} may have its idiomatic reading ("to die").
+
+
+
+
+\newpage
+
+
+\section{Analysis}
+
+I propose the following constraint:
+
+\begin{exe}
+\ex[]{\textbf{Constraint on the interpretation of idioms in multidominant structures (CIMS)} \\the multiply dominated pivot must NOT be \textit{partially shared} by idiomatic structure in order to allow idiomatic interpretation of the pivot (See (19) for sharing)}\label{brent}
+\end{exe}
+
+\begin{exe}
+\ex\label{idmd9} \textbf{Case 1: no idiomatic interpretation} \\
+$\ominus$ \textit{Chad kicked and Megan filled the bucket.} \\
+\jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {TP}
+       <wideleft>{TP_1}!a ^<vert>{and} ^<wideright>{TP_2}
+       :({NP_2}<shortvert>{Megan}) {VP_2}@A2
+       :({V_2}\\{filled}) 
+       [scaleby=3 1,branch=\blank]{NP_3}@A3 !b .
+    \!a = :({NP_1}<shortvert>{Chad}) {VP_1}@A1
+       <left>{V_1}\\{\uline{kicked}}.
+    \!b = <vartri>{\uline{the bucket}}.
+    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+    \endjtree
+\end{exe}
+
+\begin{itemize}
+\item NP_3 is shared by VP_1 and VP_2. NP_3 is selected by the idiomatic V_1 and follows Bruening's principles. So the idiom should be available...
+\item ... but it violates the constraint in (\ref{brent}) and the idiomatic interpretation is blocked.
+\end{itemize}
+
+\begin{exe}
+\ex\label{idmd10} \textbf{Case 2: no idiomatic interpretation} \\
+$\ominus$ \textit{Chad kicked and Megan filled the bucket.} \\
+\jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {TP}
+       <wideleft>{TP_1}!a ^<vert>{and} ^<wideright>{TP_2}
+       :({NP_2}<shortvert>{Kendra}) {VP_2}@A2
+       :({V_2}\\{\uline{brought home}}) 
+       [scaleby=3 1,branch=\blank]{NP_3}@A3 !b .
+    \!a = :({NP_1}<shortvert>{Marco}) {VP_1}@A1
+       <left>{V_1}\\{cooked}.
+    \!b = <vartri>{\uline{the bacon}}.
+    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+    \endjtree
+\end{exe}
+
+\begin{itemize}
+\item NP_3 is shared by VP_1 and VP_2. NP_3 is selected by the idiomatic V_2 and follows Bruening's principles. So the idiom should be available...
+\item ... but it violates the constraint in (\ref{brent}) and the idiomatic interpretation is blocked.
+\end{itemize}
+
+\begin{exe}
+\ex\label{idmd11} \textbf{Case 3: idiomatic interpretation} \\
+$\oplus$ \textit{Jessica believed, but Zac doubted that Justin popped the question.} \\
+\jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {TP}
+       <wideleft>{TP_1}!a ^<vert>{but} ^<wideright>{TP_2}
+       :({NP_2}<shortvert>{Zac}) {VP_2}@A2
+       :({V_2}\\{doubted}) 
+       [scaleby=3 1,branch=\blank]{CP_3}@A3 !b .
+    \!a = :({NP_1}<shortvert>{Jessica}) {VP_1}@A1
+       <left>{V_1}\\{believed}.
+    \!b = <vartri>{that Justin \uline{popped the question}}.
+    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+    \endjtree
+\end{exe}
+
+\begin{itemize}
+\item CP_3 is shared by VP_1 and VP_2. CP_3 not \textit{partially shared} by idiomatic material, in fact it is not shared by idiomatic material at all,
+\item ... it does not violate (\ref{brent}) and the idiomatic interpretation is not blocked.
+\end{itemize}
+
+\subsection{Ellipsis analysis}
+
+
+\begin{exe}
+\ex\label{idel1} Ellipsis analysis of $\ominus$ \textit{Chad kicked and Megan filled the bucket.} (after Ha 2008)\\
+    \jtree[xunit=3.5em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {TP}
+       <wideleft>{TP}!a ^<vert>{and} ^<wideright>{TP}
+       :({NP}<shortvert>{Megan}) {VP}@A2
+       :({V}\\{filled}\\{E_{RNR}}) {NP} <vartri>{the bucket} .
+    \!a = :({NP}<shortvert>{Chad}) {VP}@A1
+       :({V}\\{\uline{kicked}}\\{E_{RNR}}) {NP} <vartri>{\uline{the bucket}} .
+    \endjtree
+\end{exe}
+
+\begin{itemize}
+\item Bruening's theory predicts that the idiomatic interpretation is available in an ellipsis analysis. The idiom adheres to (\ref{idrule1}): V selects the NP, so X and Y may be interpreted idiomatically. 
+\item I can't propose a similar principle like (\ref{brent}) because in uncontroversial instances of ellipsis, such as VP-ellipsis, the idiomatic reading survives, as in (\ref{VPe}).
+\end{itemize}
+
+\begin{exe}
+\ex[$\oplus$]{John \uline{kicked the bucket}, and $\oplus$ Bill did \uline{\sout{kick the bucket}} too. \\ ('John died, and Bill died.')}\label{VPe}
+\end{exe}
+
+\newpage
+
+\subsection{Consequences 1: Idiom extension}
+
+There are some interesting cases where idioms in RNR \textit{do} have an idiomatic interpretation, made available by \textit{extending the idiomatic interpretation} to the second, typically unidiomatic conjunct. 
+
+\begin{exe}
+\ex[$\oplus$]{Leonard was quick to \uline{spill}, but Penny came around to help clean up, \uline{\textit{the beans}}.}\label{id-ext1}
+\ex[$\oplus$]{By working on binding theory Hugh \uline{has a tiger}, but by working on coordination Ian has a whole pride of lions, \uline{\textit{by the tail}}.}\label{id-ext2}
+\end{exe}
+
+This is one possible way to formalize this:
+
+\begin{exe}
+\ex[]{\textbf{Idiom spreading under sharing (Working)} \\ If \textalpha\ is shared by P and Q, and  \\
+(i) P and \textalpha\ may be interpreted idiomatically, then \\
+(ii) Q and \textalpha\ may be interpreted idiomatically, to the extent that they're analyzable. }\label{brent2}
+\end{exe}
+
+\begin{exe}
+\ex\label{idmd9} Multidominance analysis of \\ (\ref{id-ext1}, simplified) $\oplus$ \textit{Leonard spilled and Penny cleaned up the beans.} \\
+\begin{xlista}
+\ex Idiom interpretation \\
+\jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {TP}
+       <wideleft>{TP_1}!a ^<vert>{and} ^<wideright>{TP_2}
+       :({NP_2}<shortvert>{Penny}) {VP_2}@A2
+       :({V_2}\\{cleaned up}) 
+       [scaleby=3 1,branch=\blank]{NP_3}@A3 !b .
+    \!a = :({NP_1}<shortvert>{Leonard}) {VP_1}@A1
+       <left>{V_1}\\{\uline{spilled}}.
+    \!b = <vartri>{\uline{the beans}}.
+    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+    \endjtree
+\ex Spreading: \\
+\jtree[xunit=2.45em,yunit=1.4em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {TP}
+       <wideleft>{TP_1}!a ^<vert>{and} ^<wideright>{TP_2}
+       :({NP_2}<shortvert>{Penny}) {VP_2}@A2
+       :({V_2}\\{\uline{\fbox{cleaned up}}}) 
+       [scaleby=3 1,branch=\blank]{NP_3}@A3 !b .
+    \!a = :({NP_1}<shortvert>{Leonard}) {VP_1}@A1
+       <left>{V_1}\\{\uline{spilled}}.
+    \!b = <vartri>{\uline{the beans}}.
+    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+    \endjtree
+    \end{xlista}
+\end{exe}
+
+An ellipsis account has no idiomatic material in the second conjunct:
+
+\begin{exe}
+\ex{$\oplus$ Leonard was quick to \uline{spill} \uline{\sout{the beans}}, but $\ominus$ Penny came around to help clean up, \textit{the beans}.} 
+\end{exe}
+
+
+\subsection{Consequences 2: Analyzability}
+
+\begin{itemize}
+\item Idioms range from the highly analyzable (\textit{pop the question}) to the less analyzable (\textit{kick the bucket}). \citep{Gibbs:1989,Svenonius:2005}
+\item "Analyzable" refers to the degree to which the parts of an idiom can be readily metaphorically related to other meanings that combine to give an idiomatic interpretation.
+\end{itemize}
+
+
+\begin{itemize}
+\item The experiment in \citealt{Hamblin:1999} demonstrated that the idiomatic interpretation of idioms can be preserved even when the verb is replaced, but only under a set of conditions. 
+\item Participants rated the idiom \textit{punt the bucket} as "similar" to the original, and the phrase \textit{nudge the bucket} as "dissimilar" to the original. They conclude: "it seems that nondecomposable idioms may actually be lexically flexible to some degree" \cite[33]{Hamblin:1999}
+\item The behavior of idioms with RNR reflects these judgments, if part of the idiom in the second, contrasting conjunct is replaced with a too-dissimilar element, the idiomatic interpretation is unavailable.
+\end{itemize}
+
+
+%\begin{itemize}
+%	\item *** MACHONIS 1985 TRANSOFMRATION SOF VERB PHRASE IDIOMS
+%	\item *** conculsion in that "there seems to be no single feature that enhances or inhibits passivization, it would appear that each idiom would have to be individually marked for this transformation in the lexicon." (300)
+%	\item *** "For an idiom, the existence of one transformation (e.g., passivization) does not automatically imply the existence of another transformation (e.g., particle movement) (302) WHERE DOES RNR fit into this picture, does it co-pattern with passivization, particle movement, dative shift.
+%\end{itemize}
+
+
+\begin{exe}
+\ex Analyzable idiom, but second conjunct is too-dissimilar
+	\begin{xlista}
+		\ex[$\ominus$?]{Alex had a \uline{bun}, and Kerry had a three-bean casserole \_, \uline{\textit{in the oven}}.}
+		\ex[$\ominus$?]{The so-called "Emperor of Canada" definitely has \uline{bats} , but the actual "King of Mexico" just has cobwebs, \uline{\textit{in his belfry}}.}
+		\ex[$\ominus$?]{The harsh review of the movie was just \uline{rubbing salt}, although the director's friends tried to rub sugar, \uline{\textit{on his wounds}}.}
+	\end{xlista}
+\end{exe}
+
+
+\begin{exe}
+	\ex[$\ominus$]{Chad kicked, and Megan filled, \textit{the bucket}.}
+	\ex 
+	\begin{xlista}
+		\ex[$\oplus$]{Chad kicked, and Megan punted, \textit{the bucket}. \hspace*{\fill} [similar]}\label{asdf1}
+		\ex[$\ominus$]{Chad kicked, and Megan nudged, \textit{the bucket}. \hspace*{\fill} [dissimilar]}\label{asdf2}
+	\end{xlista}
+\end{exe}
+
+
+
+\begin{exe}
+\ex
+\begin{xlista}
+\ex Attempted spread: \\
+\jtree[xunit=2.6em,yunit=.3em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {TP}
+       <wideleft>{TP_1}!a ^<vert>{and} ^<wideright>{TP_2}
+       :({NP_2}<shortvert>{Megan}) {VP_2}@A2
+       :({V_2}\\{\uline{\fbox{nudged}}}) 
+       [scaleby=3 1,branch=\blank]{NP_3}@A3 !b .
+    \!a = :({NP_1}<shortvert>{Chad}) {VP_1}@A1
+       <left>{V_1}\\{\uline{kicked}}.
+    \!b = <vartri>{\uline{the bucket}}.
+    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+    \endjtree
+\end{xlista}
+\end{exe}
+
+But \textit{nudge} is too dissimilar a verb, so \textit{nudge the bucket} cannot be interpreted idiomatically.
+
+\begin{exe}
+\ex
+\begin{xlista}
+\ex Attempted spread: \\
+\jtree[xunit=2.6em,yunit=.3em,dirA=(1:-1),nodesep=0]
+    \def\\{[labelgapb=-4pt]}%
+    \def\V{$\rm \overline V$}%
+    \! = {TP}
+       <wideleft>{TP_1}!a ^<vert>{and} ^<wideright>{TP_2}
+       :({NP_2}<shortvert>{Megan}) {VP_2}@A2
+       :({V_2}\\{nudged}) 
+       [scaleby=3 1,branch=\blank]{NP_3}@A3 !b .
+    \!a = :({NP_1}<shortvert>{Chad}) {VP_1}@A1
+       <left>{V_1}\\{\uline{kicked}}.
+    \!b = <vartri>{\uline{the bucket}}.
+    \nccurve[angleB=150,ncurvB=1.4]{A2:b}{A3:t}
+    \nccurve[angleB=135,ncurvA=.8,ncurvB=2.8]{A1:b}{A3:t}
+    \endjtree
+\end{xlista}
+\end{exe}
+
+THEN (48) is broken, we're back at our base case (49): the pivot is no longer \textit{shared} by idiomatic structures -- so the whole sentence disallows idiomatic interpretation. {\color{white} \cite{Citko:rnr}}
+
+Ellipsis would be unable to distinguish (\ref{asdf1}) from (\ref{asdf2}).
+
+\begin{exe}
+\ex
+\begin{xlista}
+	\ex $\oplus$ Chad \uline{kicked \sout{the bucket}}, and $\ominus$ Megan punted the bucket.
+	\ex $\oplus$ Chad \uline{kicked \sout{the bucket}}, and $\ominus$ Megan nudged the bucket.
+\end{xlista}
+\end{exe}
+
+%
+%\begin{exe}
+%\ex First conjunct is idiomatic, second conjunct is not, moreover it causes overall incoherence
+%	\begin{xlista}
+%		\ex[$\ominus$,\#]{Unfortunately, I'm feeling \uline{under}, but Jeff is feeling over, \uline{\textit{the weather}}.}
+%		\ex[$\ominus$,\#]{Enrico always drives me \uline{up}, but Willy usually drives me down, \uline{\textit{the wall}}.}
+%		\ex[$\ominus$,\#]{Bogdan already has his \uline{ducks}, but Jules will never have his cats, \uline{\textit{in a row}}.}
+%	\end{xlista}
+%\end{exe}
+
+\section{Summary}
+
+Here is a summary of what was covered above, about the various configurations of idioms and RNR, and what the accounts say about them:
+
+\begin{exe}
+\ex \textbf{Base case}: \textit{Chad kicked, and Megan filled, the bucket.}
+\begin{xlista}
+\ex		Ellipsis predicts that the idiomatic interpretation is available. It overgenerates meanings.
+\ex		Multidominance predicts that the idiomatic interpretation is available. It also overgenerates.
+\end{xlista}
+\ex \textbf{Idiom extension}: \textit{Leonard was quick to spill, but Penny came around to help clean up, the beans.}
+\begin{xlista}
+\ex		Ellipsis predicts the conjuncts can be independent with regards to interpretation yielding a half-idiomatic, half-literal interpretation. It overgenerates meanings here. 
+\ex		Multidominance simply predicts that the idiomatic interpretation is available in the first conjunct. It says nothing about extension, but it doesn't yet rule it out based on Bruening's principles or overgenerate meanings.
+\end{xlista}
+\ex \textbf{Analyzability}: \textit{Chad kicked, and Megan punted/nudged, the bucket.}
+\begin{xlista}
+\ex		Ellipsis overgenerates and undergenerates meanings. In the sentence with \textit{nudged}, it predicts that the first conjunct can be idiomatic, counter to fact. It also predicts that the second conjunct won't ever be idiomatic, using either \textit{punted} or \textit{nudged}, counter to fact. 
+\ex		Multidominance predicts that the idiomatic interpretation of the first conjunct is available. Again it says nothing about extension to \textit{punted} or \textit{nudged}, but it doesn't rule extension out or overgenerate.
+\end{xlista}
+\end{exe}
+
+\fbox{
+\parbox{0.90\linewidth}{
+Right Node Raising can be used to help classify idioms by their analyzability, based on whether or not it is possible to extend their interpretation by modifying the second conjunct.}}
+
+
+
+\section*{Alternative approaches to RNR}
+
+
+\subsection*{Movement approaches to RNR}
+
+\textbf{Analyses}: \citealt{Ross:1967,Sabbagh:2007,Sabbagh:2008,Clapp:2008,Abe:2012}, among others (and responses in \citealt{Larson:2011,Larson:2012})
+
+%Sabbagh:2008,Nakao:2010,
+
+\textbf{Outline}: all copies of the pivot are base-generated within the conjuncts. ATB-movement applies to all instances of the pivot and adjoins a single copy of the pivot to some position external to the coordinate structure. 
+
+\begin{exe}
+\ex A movement-based analysis of RNR \\ 
+ \textit{John wrote, and Mary reviewed, a paper on verbs.} \\
+\begin{tree}
+\psset{levelsep=.4in,treesep=0.2in}
+\br{\&P}{
+\br{\&P}{
+	\br{TP}{
+		\br{DP}{\tlf{John}}
+		\br{VP}{
+			\br{V}{\lf{wrote}}
+			\br{DP}{\tlf{\node{alpha1}{\sout{a paper on verbs}}}}}}
+	\br{\&}{\lf{and}}
+	\br{TP}{
+		\br{DP}{\tlf{Mary}}
+		\br{VP}{
+			\br{V}{\lf{reviewed}}
+			\br{DP}{\tlf{\node{subj2}{\sout{a paper on verbs}}}}}}}
+\br{DP}{\tlf{\node{subj1}{a paper on verbs}}}}
+%\anodecurve[br]{alpha1}[br]{subj1}{1.3in}
+%\anodecurve[br]{subj2}[br]{subj1}{.7in}
+\abarnodeconnect[-25pt]{alpha1}{subj1}
+\abarnodeconnect[-25pt]{subj2}{subj1}
+\end{tree}
+\end{exe}
+\vspace{30pt}
+
+\textbf{Evidence for a movement approach}
+
+\textbf{Complement PPs}: Stowell (1991): PP complement of adjectives like \textit{wonderful} cannot be moved:
+
+\begin{exe}
+\ex \begin{xlista}
+	\ex[]{That was wonderful of John.}
+	\ex[*]{Of whom was that wonderful \_?}\label{pp-out3}
+	\end{xlista}
+\end{exe}
+
+\cite{Postal:1998} the same set of adjectives prohibits RNR constructions:
+
+\begin{exe}
+\ex[*]{That may have been wonderful, and probably was wonderful, of the person who I had just met in the park.}\label{wonderful-bad}
+\end{exe}
+
+\textbf{CSC}: \cite{Wexler:1980}: the Coordinate Structure Constraint (CSC) (Ross 1967) holds on RNR:
+
+\begin{exe}
+\ex\label{CSC-bad}
+	\begin{xlista}
+	\ex[*]{Tom is writing an article on Aristotle and \_, and Elaine has just published a monograph on Mesmer and \_, Freud. \\ \hspace*{\fill} (violating CSC-I: don't extract whole conjuncts; from McCawley 1982)}
+	\ex[*]{Joss wrote \_, Mary was reviewing a paper about semiotics, and Paul wanted to read \_, a paper about RNR \\ \hspace*{\fill} (violating CSC-II: don't extract parts of conjuncts; from Sabbagh 2007)}
+	\end{xlista}
+\end{exe}
+
+\textbf{Scope}: Of interest to us is that there is another interpretation of this sentence, where the pivot takes wide scope over the coordinate structure: that is, for every patient, there may have been a different nurse administering medical attention (inverse scope). (Sabbagh 2007)
+
+\begin{exe}
+\ex Some nurse gave a flu shot, and administered a blood test, to every patient who was admitted last night to the ER. 
+\end{exe}
+
+
+
+\subsection*{Ellipsis approaches to RNR}
+
+\textbf{Analyses}: \citealt{Wexler:1980,Kayne:1994,Boskovic:2004,Ha:2008}, among others 
+%Bejan:2008,Ince:2009
+
+\textbf{Outline}: copies of the pivot are base-generated in all conjuncts. Only the last copy is pronounced.
+
+\begin{exe}
+\ex An ellipsis-based analysis of RNR \\ 
+ \textit{John wrote, and Mary reviewed, a paper on verbs.} \\
+\begin{tree}
+\psset{levelsep=.4in,treesep=0.3in}
+\br{\&P}{
+	\br{TP}{
+		\br{DP}{\tlf{John}}
+		\br{VP}{
+			\br{V}{\lf{wrote}}
+			\br{DP}{{\color{gray}\tlf{a paper on verbs}}}}}
+	\br{\&}{\lf{and}}
+	\br{TP}{
+		\br{DP}{\tlf{Mary}}
+		\br{VP}{
+			\br{V}{\lf{reviewed}}
+			\br{DP}{\tlf{a paper on verbs}}}}}
+\end{tree}
+\end{exe}
+
+\vspace{20pt}
+\textbf{Evidence in favor of an Ellipsis account of RNR}
+
+\textbf{RNR shares properties with ellipsis}: 
+Many well-established properties of ellipsis also show up in RNR, including: Vehicle Change effects, morphological mismatches, sloppy identity, parallelism, to name a few.
+
+\textbf{Morphological mismatch} For example: morphological identity between elided element and antecedent is not a precondition for elision. 
+
+\begin{exe}
+\ex Alice [_{VP} sleeps in the office] everyday, but Bob only does [_{VP} $\Delta$] on Friday. \\
+$\Delta$ = sleep in the office
+\end{exe}
+
+The same property is observed in RNR:
+
+\begin{exe}
+\ex John hasn't $\Delta$, but Bill may be , questioning our motives. \\
+$\Delta$ = questioned our motives \hspace*{\fill} \citep{Boskovic:2004}
+\end{exe}
+
+\textbf{RNR appears to affect non-constituents}: RNR sometimes involves a portion of structure that does not align with the notion of a syntactic constituent.
+
+The following example in Korean shows an RNR sentence, where the pivot is clearly a non-constituent:
+
+\begin{exe}
+\ex\label{krn-non} \gll Tomo-nun Ana-ka ppang-ul \sout{mekess-tako} \sout{malhayssta} kuliko Nina-nun Ana-ka bap-ul \textit{mekess-tako} \textit{malhayssta} \\
+	T-top A-nom bread-acc ate-comp said and N-top A-nom rice-acc ate-comp said \\ 
+	\glt 'Tomo (said that) Ana (ate) bread, and Nina said that Ana ate rice.'\hspace*{\fill} \citep[142]{An:2007}
+\end{exe}
+
+
+\subsection*{Even more approaches to RNR}
+
+\begin{itemize}
+    \item  three-dimensional phrase structure \citep{Duman:2003}
+    \item null anaphor (a movement account without ATB-movement) \citep{Kimura:1986}
+    \item conjunction reduction \citep{Velde:2006} 
+    \item post-syntactic linearization-based deletion phenomenon \citep{Chaves:2007,Chaves:2014}
+    \item syntactically-incomplete structure rescued by pragmatic inference \citep{Larson:2013,Larson:2013a}.
+    \item hybrid (heterogenous, eclectic) accounts, such as \citealt{Barros:2010,Barros:2011,Valmala:2013,Chaves:2014} that argue that RNR is not a unified phenomenon, and should be analyzed using more than one strategy in certain cases.
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------
+%	BIB
+%----------------------------------------------------------------------------
+
+
+
+
+\begin{multicols}{2}
+{\footnotesize
+\bibliography{rnr}}
+\bibliographystyle{cbe}
+\end{multicols}
+
+\end{document}
