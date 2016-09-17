@@ -1,0 +1,15 @@
+[0] Config.pm:324> INFO - This is Biber 2.1
+[0] Config.pm:327> INFO - Logfile is 'LCUGA3-slash.blg'
+[62] biber-darwin:276> INFO - === Wed Sep 14, 2016, 03:28:07
+[62] Biber.pm:333> INFO - Reading 'LCUGA3-slash.bcf'
+[180] Biber.pm:642> INFO - Using all citekeys in bib section 0
+[250] Biber.pm:2977> INFO - Processing section 0
+[304] Biber.pm:3115> INFO - Looking for bibtex format file 'slash.bib' for section 0
+[323] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[324] bibtex.pm:895> INFO - Found BibTeX data source 'slash.bib'
+[446] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[447] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[447] Biber.pm:2854> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[447] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[453] bbl.pm:505> INFO - Writing 'LCUGA3-slash.bbl' with encoding 'UTF-8'
+[453] bbl.pm:596> INFO - Output to LCUGA3-slash.bbl

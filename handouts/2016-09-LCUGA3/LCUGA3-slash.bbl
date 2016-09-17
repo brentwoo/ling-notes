@@ -1,0 +1,122 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nyt}{nyt}
+    \entry{Clancy:1976}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4610b3a571c0f34efef1ef7cb25001c6}{Clancy}{C\bibinitperiod}{Patricia}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{4610b3a571c0f34efef1ef7cb25001c6}
+      \strng{fullhash}{4610b3a571c0f34efef1ef7cb25001c6}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelyear}{1976}
+      \field{labelmonth}{12}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Papers and reports on child language development}
+      \field{month}{12}
+      \field{title}{The acquisition of conjunction: A cross-linguistic study}
+      \field{volume}{12}
+      \field{year}{1976}
+      \field{pages}{71\bibrangedash 80}
+      \range{pages}{10}
+    \endentry
+    \entry{Haspelmath:2004}{inbook}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=6554cfb014a9427af44c63f16722a3dd}{Haspelmath}{H\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=6554cfb014a9427af44c63f16722a3dd}{Haspelmath}{H\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {John Benjamins}%
+      }
+      \strng{namehash}{6554cfb014a9427af44c63f16722a3dd}
+      \strng{fullhash}{6554cfb014a9427af44c63f16722a3dd}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2004}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{1}
+      \field{series}{Coordinating constructions}
+      \field{title}{Coordinating constructions: an overview}
+      \field{year}{2004}
+      \field{pages}{3\bibrangedash 39}
+      \range{pages}{37}
+    \endentry
+    \entry{Lust:1980}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b05feed426ceb730a9d87d8c48d68b7f}{Lust}{L\bibinitperiod}{Barbara}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b05feed426ceb730a9d87d8c48d68b7f}
+      \strng{fullhash}{b05feed426ceb730a9d87d8c48d68b7f}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelyear}{1980}
+      \field{labelmonth}{08}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Papers and reports on child language development}
+      \field{month}{08}
+      \field{title}{Coordination: The role of syntactic, pragmatic and processing factors in its first language acquisition}
+      \field{volume}{19}
+      \field{year}{1980}
+      \field{pages}{79\bibrangedash 87}
+      \range{pages}{9}
+    \endentry
+    \entry{Mithun:1988}{incollection}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=796a60429c4ec7fef15bb3f4c724c550}{Mithun}{M\bibinitperiod}{Marianne}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=b8c449b7ff24672a8876e2af53174ab0}{Haiman}{H\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=fe87ee47c1908a42926eeb9c7b52b6b4}{Thompson}{T\bibinitperiod}{Sandra\bibnamedelima A.}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {John Benjamins}%
+      }
+      \strng{namehash}{796a60429c4ec7fef15bb3f4c724c550}
+      \strng{fullhash}{796a60429c4ec7fef15bb3f4c724c550}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{1988}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Clause {C}ombining in {G}rammar and {D}iscourse}
+      \field{series}{Typological {S}tudies in {L}anguage}
+      \field{title}{The grammaticalization of coordination}
+      \field{volume}{18}
+      \field{year}{1988}
+      \field{pages}{331\bibrangedash 359}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1075/tsl.18.13mit
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

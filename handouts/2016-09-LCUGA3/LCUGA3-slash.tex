@@ -1,0 +1,458 @@
+%\listfiles
+% !BIB program = biber
+
+% see http://info.semprag.org/basics for a full description of this template
+\documentclass[charis,linguex,biblatex]{glossa}
+% possible options: 
+% [times] for Times font (default if no option is chosen)
+% [cm] for Computer Modern font 
+% [lucida] for Lucida font (not freely available)
+% [brill] open type font, freely downloadable for non-commercial use from http://www.brill.com/about/brill-fonts; requires xetex
+% [charis] for CharisSIL font, freely downloadable from http://software.sil.org/charis/
+% for the Brill an CharisSIL fonts, you have to use the XeLatex typesetting engine (not pdfLatex)
+% [biblatex] for using biblatex (default)
+% [linguex] loads the linguex example package
+% !! a note on the use of linguex: in glossed examples, the third line of the example (the translation) needs to be prefixed with \glt. This is to allow a first line with the name of the language and the source of the example. See examples (2) in the text for an illustration.
+
+
+\usepackage{attrib}
+
+\usepackage{endnotes}
+\let\footnote=\endnote
+\usepackage{fullpage}
+\usepackage{gb4e}
+
+\addbibresource{slash.bib} % this is for use with biblatex; comment out if you use natbib
+%replace this by the name of your bib-file (extension .bib is required)
+
+\usepackage{sectsty} %control style of section headings
+\allsectionsfont{\normalfont\sffamily\bfseries} %sans serif boldface in section headings
+
+% \pdf* commands provide metadata for the PDF output. ASCII characters only!
+\pdfauthor{Brent Woo}
+\pdftitle{Slash : A new coordinator in English}
+\pdfkeywords{Full keyword list, separated, by, commas}
+
+% Optional short title inside square brackets, for the running headers. If no short title is given, no title appears in the headers.
+
+\title[Slash : A new coordinator in English]{Slash : A new coordinator in English and its behavior slash structure
+%\thanks{The authors wish to thank Martin Haspelmath for providing the generic style sheet for linguistics, and Kai von Fintel for giving permission to use and modify the \textit{Semantics \& Pragmatics} Latex template, bibliography style, and document class.}
+}
+
+% Optional short author inside square brackets, for the running headers. If no short author is given, no authors print in the headers.
+
+\author[Woo]% short form of the author names for the running header
+{%as many authors as you like, each separated by \AND.
+  \spauthor{Brent Woo\\ 
+  \institute{University of Washington}\\
+  \small{
+  bwoo@uw.edu}
+  }
+%  \AND
+%  \spauthor{Guido Vanden Wyngaerd \\
+%  \institute{KU Leuven}\\
+%  \small{Warmoesberg 26, 1000 Brussel\\
+%  guido.vandenwyngaerd@kuleuven.be}
+%  }%
+}
+
+\begin{document}
+
+\sffamily
+\maketitle
+
+%\begin{abstract}
+%This document provides a full overview of the information relating to Glossa submissions. This information includes (i) the stylesheet, and (ii) further author guidelines. So as to provide instruction both by example and by rule, this document has been formatted in accordance with the stylesheet it contains.
+%\end{abstract}
+%
+%\begin{keywords}
+%  Glossa; stylesheet; latex template
+%\end{keywords}
+
+%\hrulefill
+
+\rmfamily
+
+
+
+\fbox{\begin{minipage}{0.95\textwidth}
+This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. 
+\end{minipage}}
+
+
+
+\section{Introduction}
+
+Purpose
+
+\begin{itemize} 
+\item Present documentation of and data using \textit{slash}, what I argue is a \textbf{new coordinator} in English.
+\item Investigate the implications for the lexicon
+\end{itemize}
+
+Research questions
+
+\begin{itemize}
+\item What does it mean?
+\item What is the category of \textit{slash}?
+\item What is the syntactic behavior of \textit{slash}?
+\end{itemize}
+
+
+Examples with endnote superscript are from the Corpus of Contemporary American English (COCA), mostly retrieved in September 2016.
+
+
+\section{What does `spoken punctuation' refer to?}
+
+ \begin{quote}
+  everybody, uses commas, so Ill, use them, too,,, \\
+  I can. mix ( up all? kinds of punctuation -- in, my. writing! There'' are lots, of rules; to learn? but. Im' get'ting them in my head: \\
+  Punctuation, is? fun!
+    \attrib{\textit{Flowers for Algernon}. Orion. p.27}
+ \end{quote}
+
+\begin{itemize}
+\item Interesting, but set aside for now:
+    \begin{itemize}
+    \item Most punctuation generally serves to delimit text-organization chunks. If they have a spoken/phonetic correlate, it only roughly corresponds to falling intonation or pause: periods, commas, semicolons, colons. \citep{Nunberg:1990}
+    \item Suprasegmental ``realization'' of clausal punctuation: question marks, exclamation marks, parentheses, correlative m-dashes.
+    \item No possible phonetic correlate: hyphens, apostrophes.
+    \end{itemize}
+    
+\item Names of punctuation that have moved productively into spoken language. Examples are from Spoken COCA:
+	\begin{itemize}
+	\item \textbf{period / full stop}\footnote{An intuition might be that these in spoken language are limited to American / Commonwealth Englishes, respectively, but there is one example shows that both are available to the same speaker and both can be juxtaposed, non-redundantly, for emphasis: 
+		\begin{exe}
+			\ex  EVANS: Now what you could say is you could compel them if you want to go to a doctor, use a hospital service, you have to have insurance to do that. That -- if the law was structured that way, they might have more luck with it, but to say to someone you have to buy this, just \textbf{period, full stop}, as far as what can I understand is the essence and the core of the problem here. \\(Tags: 	2012 (120325) New York magazines John Heilemann, CNNs Gloria Borger, New York Times David Leonhardt, CNBCs Kelly Evans discuss current events and politics SPOK: NBC\_Matthews; URL: http://corpus.byu.edu/coca/x4.asp?t=4103732\&ID=660489195)
+		\end{exe}		}
+		\begin{exe}
+			\ex ``Esports is the future of competition. \textbf{Period},'' UCI's Acting Director of Esports Mark Deppe says.\footnote{Retrieved from \texttt{https://www.engadget.com/2016/09/14/esports-arena-college-uc-irvine-leage-of-legends/?sr_source=Facebook} 9/15/16}
+			\ex No. He sent her out to go get a sandwich, \textbf{period}.\footnote{Tags: 2015 (150106) Did Princeton Grad Murder Millionaire Dad?; Cops Try To Identify Newborn Left To Die  SPOK: CNN; URL: \texttt{corpus.byu.edu/coca/x4.asp?t=4125698\&ID=697031023}}
+			\ex There is an official order gone out from the pope that senior Vatican people are not to gossip with the media. \textbf{Full stop}.\footnote{Tags: 2005 (20050306) Critique of Worldwide Media Coverage SPOK: CNN\_Intl, URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=177710\&ID=562387417}}
+		\end{exe}
+	
+	
+
+		
+	\item \textbf{quote}\footnote{\textit{Quote} itself has a basket of interesting properties. To mention a few: it can interrupt very small units, like breaking up an ADJ from its N as demonstrated in (\ref{quote1}); its meaning of derision in (\ref{quote1}); its meaning of verbatim but not necessarily spoken in (\ref{quote2}). \textit{Quote} might be the only kind of correlative spoken punctuation, with the possible correlate \textit{unquote} used to help delimit the scope. Standard, intuitive usage simply flanks the material.
+	\begin{exe}
+		\ex One can not, as war correspondent Michael Herr testifies in dispatches, simply, \textbf{quote}, `` run the film backwards out of consciousness, '' \textbf{unquote}. \\
+		(Tags: 2015 (150120) In The Evil Hours, A Journalist Shares His Struggle With PTSD SPOK: NPR, URL:\texttt{corpus.byu.edu/coca/x4.asp?t=4125904\&ID=702812798})
+		\ex bad topiary is, \textbf{quote}, the senseless torture of shrubs, \textbf{unquote}; \\
+		(Tags: 2014 (140125) Not My Job: How Much Does A Former Hedge Fund Manager Know About Hedges? SPOK: NPR; URL: \texttt{corpus.byu.edu/coca/x4.asp?t=4125017\&ID=703922437})
+	\end{exe} 
+	There also exists a kind of Polish notation variant where the entire ``quote-unquote'' is uttered before the quotation, which is also not uncommon.
+	\begin{exe}
+		\ex The last words in one of his emails was, \textbf{quote, unquote}, `` You are not getting off that easy. ''
+		\ex ``That, I think, is much better than being \textbf{quote/unquote} `religious,' '' the crow said. \\
+			(Sedaris, David. 2010 \textit{Squirrel seeks chipmunk}. p.78) 
+	\end{exe}
+	There is no such variant for other correlatives constructions: \textit{*either or John Mary, *both and Tim Minh}. Note also \textit{quote} can stand on its own, while \textit{unquote} cannot.
+	}
+		\begin{exe}
+			\ex\label{quote1} they have a new, \textbf{quote}, `` strategy '' to work with Congress on some things of mutual interest.\footnote{Tags: 2015 (150104)
+Interview With Delaware Senator Chris Coons; SPOK: CBS, URL: \texttt{corpus.byu.edu/coca/x4.asp?t=4125488\&ID=692823178}}
+			\ex\label{quote2} It reads, \textbf{quote}, `` It appears that I am now being unjustly victimized again. ''\footnote{Tags: 2015 Royal Sex Scandal: Prince Andrew
+SPOK: CNN, URL:\texttt{corpus.byu.edu/coca/x4.asp?t=4125774\&ID=695736684}}
+		\end{exe}
+	\item \textbf{slash} \\
+		(Here we are.)
+	\end{itemize}
+\end{itemize}
+
+
+
+
+\section{Meaning}
+
+\section{Category questions}
+
+There are two: What category is \textit{slash}, and what categories does it coordinate?
+
+\subsection{Category}
+
+\begin{itemize}
+\item Coordinator is the most reasonable guess. 
+	\begin{itemize}
+\item Seems mostly to link two similar, nominal categories (DP, NP, N, A), but there are examples of higher categories (VP).
+\item Monosyndetic, like English. (one coordinator per pair of coordinands)
+\item Argument by definition: ``Coordinating constructions can be identified on the basis of their symmetry: A construction [A B] is considered coordinate if the two parts A and B have the same status, whereas it is not coordinate if it is asymmetrical and one of the parts is clearly more salient or important, while the other part is in some sense subordinate.'' \citep[3]{Haspelmath:2004}
+\end{itemize}
+
+\item Preposition is plausible candidate.
+	\begin{itemize}
+		\item Takes a DP complement.
+		\item No: generally English allows P-stranding, but: \\ \textit{*What are those journalists slash \_?}
+		\item No: absolutely no pied-piping, which P usually allow. \\ \textit{*[Slash what] are those journalists \_?}.
+		\item No: Coordinands don't seem to be super-/sub-ordinate.
+	\end{itemize}
+
+\end{itemize}
+
+\subsection{Categories selected by it}
+
+Mostly nominal (N, A).
+
+
+
+
+\begin{exe}
+	\ex Just a sip of beer... that’s what they serve these days at the \textbf{home slash beach slash pub}.\footnotemark\footnotetext{Mike Birbiglia. \textit{My Girlfriend’s Boyfriend}. 1:08:42.}
+	
+	\ex Michael Scott: There are four kinds of business: tourism, food service, railroads, and sales. \\
+(pause) \\ 
+Michael Scott: And \textbf{hospitals slash manufacturing}. And air travel.\footnotemark\footnotetext{\textit{The Office} (US). Season 3, Episode 16}
+
+	\ex The patient has a \textbf{teratoma slash neuroblastoma}.
+	
+	\ex He does \textbf{American studies slash computational linguistics}. 
+	
+	\ex Is my \textbf{bowl slash spoons} still in the dishwasher? 
+\end{exe}
+
+
+
+But also verbal
+
+\begin{exe}
+	\ex A: What are you doing? \\ 
+		B: \textbf{Office hours slash watching Olympics}. 
+	\ex I forgot that you \textbf{lived slash work here}.  
+\end{exe}
+
+
+
+\section{Syntactic behavior}
+
+
+
+People have clear meta-awareness of \textit{slash}.
+
+This newsreporter consciously comments on \textit{slash}:
+
+\begin{exe}
+\ex GRACE: Welcome back. We are live at the Provo courthouse, bringing you the latest in the trial of Martin MacNeill, a \textbf{doctor/lawyer -- I've got to add some more slashes -- slash Sunday school teacher, slash bishop}, who is accused of murdering his wife. \footnote{Tags: 2013 (131022) Facelift Murder Trial Day Five SPOK: CNN; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4123890\&ID=697288406}}
+\end{exe}
+
+The transcription is not informative enough to determine whether this is repair or perhaps asyndetic coordination (juxtaposition).
+
+\begin{exe}
+\ex  KEMAL-KIRISCI: The conflict in Syria that sometimes has been defined in Turkey as a conflict between a regime that is \textbf{minority base or, slash, Alawite base}, vs. a Sunni majority, has had a spillover effect in Turkey.\footnote{Tags: 2012 (121121) PBS NewsHour For November 21, 2012 SPOK: PBS; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4123500\&ID=705490958}}
+\ex  GROSS: Well Artie, I really want to wish you the best in all ways and thank you so much for coming back to FRESH AIR and talking with us. And I wish you good health and good moods and some happiness. Thank you very much. \\ Mr-LANGE: Thanks, Terry. And I'll see you at \textbf{the NPR and slash Sirius} Christmas party I guess.\footnote{Tags: 2009 (090612) Comic Artie Lange On Being Too Fat To Fish SPOK: NPR\_FreshAir; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4031466\&ID=634217269}}
+
+\end{exe}
+
+
+
+
+
+\begin{exe} 
+\ex
+	\begin{xlista}
+	\ex[]{Kirk and Spock entered the bridge.}
+	\ex[]{Kirk or Spock entered the bridge.}
+	\ex[\#]{Kirk slash Spock entered the bridge.}
+	\end{xlista}
+\end{exe}
+
+
+\subsection{Obligatory monosyndeton}
+
+\textit{Slash} appears to allow more than two coordinands. It is \textit{monosyndetic}: for $N$ number of coordinands, there are $N-1$ number of \textit{slash}.
+
+\begin{exe}
+    \ex   we're going to get an exclusive look inside the small box off which \textbf{magician slash contortionist slash performance artist} David Blaine is going to step tomorrow for 44 days.\footnote{Tags: 2003 SPOK ABC\_GMA; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=65391\&ID=547613660}}
+\end{exe}
+
+However, its presence is obligatory. Unlike \textit{and}, \textit{or}, "all but last" omission is degraded.
+
+\begin{exe}
+	\ex[]{I am a magician, contortionist, and performance artist.}
+	\ex[??]{I am a magician, contortionist, slash performance artist.}
+\end{exe}
+
+It is further unlike \textit{but}, which never permits more than two coordinands, omission or not.
+
+\begin{exe}
+	\ex[*]{I am a magician, contortionist, but performance artist.}
+	\ex[*]{I am a magician, but contortionist, but performance artist.}
+\end{exe}
+
+
+\subsection{Complies with the Law of Coordination of Likes}
+
+The Law of Coordination of Likes is the name for the requirement that coordinands be of the same category (or ``type'') \citep{Schacter:1977}
+
+For \textit{and, or}, category identity is too restrictive.
+
+\begin{exe}
+		\ex Pat is either stupid or a liar.
+		\ex Pat is a Republican and proud of it. \citep[117]{Sag:1985}
+\end{exe}
+
+\textit{Slash} seems generally follow the LCL. Coordinands tend to be of the same category, as the (c) examples show.
+
+\begin{exe}
+\ex \begin{xlista}
+		\ex[]{Pat is stupid slash obnoxious.}
+		\ex[]{Pat is a wreck slash a liar.}
+		\ex[*]{Pat is stupid slash a liar.}
+	\end{xlista}
+\ex	\begin{xlista}
+		\ex[]{Pat is a Republican slash Independent.}
+		\ex[?]{Pat is sick of his dog slash proud of it.}
+		\ex[*]{Pat is a Republican slash proud of it.\footnotemark\footnotetext{And this anaphoric \textit{it} really does not work for me.}}
+	\end{xlista}
+\end{exe}
+
+But there are some examples where violations of LCL are seen:
+
+\begin{exe}
+	\ex When you're not married slash in a relationship, it's incumbent on you to be proud of yourself for things. 
+\end{exe}
+
+
+
+
+\subsection{Complies with the Coordinate Structure Constraint}
+
+Lakoff, Weisser exceptions to the CSC
+
+Brute replacement of slash yields frightening ungrammaticality.
+
+\begin{exe}
+\ex	\begin{xlista}
+		\ex[]{Here's the whiskey that John went to the store and bought \_.}
+		\ex[*]{Here's the whiskey that John went to the store slash bought \_.}
+	\end{xlista}	
+\ex	\begin{xlista}
+		\ex[]{How many lakes can you pollute \_ and not arouse public furor?}
+		\ex[*]{How many lakes can you pollute \_ and note arouse public furor?}
+	\end{xlista}	
+%\ex	\begin{xlista}
+%		\ex[]{You drink one more beer and I'm leaving.}
+%		\ex[]{You drink one more beer slash I'm leaving.}
+%	\end{xlista}	
+\end{exe}
+		
+But, in these examples, (non-)grammaticality is bled by the fact that \textit{slash} doesn't coordinate anything larger than VPs.		
+
+
+\subsection{No iterative intensification}
+
+With adjectives, \textit{and} allows total coordinand identity. This construction is a somewhat idiomatic but nevertheless productive use of \textit{and}, and yields a particular ``intensifying'' reading. \citep{Gleitman:1965} \textit{slash} does not. 
+
+\begin{exe}
+\ex \begin{xlista}
+\ex[]{Garraty walked faster and faster.}
+\ex[*]{Garraty walked faster or faster.}
+\ex[*]{Garraty walked faster slash faster.}
+\end{xlista}
+\end{exe}
+
+\subsection{No comitative function}
+
+
+
+\begin{exe}
+\ex 
+	\begin{xlista}
+		\ex 
+		\ex
+	\end{xlista}
+\ex
+\end{exe}
+
+
+		
+\subsection{No internal reading of relational modifiers}
+
+\begin{exe} 
+\ex 
+	\begin{xlista}
+	\ex[]{John and Mary sang the same song.}
+	\ex[\#]{John or Mary sang the same song.}
+	\ex[\#]{John slash Mary sang the same song.}
+	\end{xlista}
+\end{exe}
+
+
+
+
+\section{Origin story}
+
+\begin{itemize}
+\item Source: my argument is \textbf{orthographical source}.\footnotemark\footnotetext{The Commonwealth term for </>, ``virgule'' has not similarly been adopted into spoken language.}^{,}\footnotemark\footnotetext{The actual \textit{cultural} origin is well-documented and very... niche.}
+
+\item As orthography, </> only really works with N or A.
+\item History: ``Coordinating conjunctions can thus originate as noun phrase links from comitative constructions, then spread to predicates and clauses.'' (but there are exceptions) \citep[350]{Mithun:1988}
+\item Typology: ``... many languages have category-sensitive coordinating constructions ... about half of the world's languages show different conjunctive constructions for nominal and verbal/clausal conjunction.'' \citep[10]{Haspelmath:2004}
+\end{itemize}
+
+
+
+
+
+
+
+
+\section{Research agenda}
+
+\begin{itemize}
+	\item \textbf{Paradigm of coordinators}. Horn's square of possible logical operators. Where does \textit{slash} fit, and do we expect the other coordinators to semantically adjust to accomodate it? 
+	\item \textbf{Processing coordinators}. Conjunction is easier to process than disjunction. Where does \textit{slash} fit?
+	\item \textbf{Acquisition of coordinators.} (1) When is \textit{slash} acquired? In English, coordination is first observed around 2;0-2;3, with more complex concepts like 'sequence' being expressed later (and the age ranges vary across languages). \citep[72]{Clancy:1976}. (2) In English, ``reduced (phrasal) coordinations are not acquired productively until full unreduced sentential coordinations are acquired.'' \citep[81]{Lust:1980} It doesn't seem likely that \textit{slash}-coordinations are derived with coordination reduction. 
+	\item \textbf{Other coordinators?} \textit{and/or}!
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section*{Appendix}
+
+\begin{exe}
+\ex Spoken
+    \begin{xlista}
+    \ex	Drew and I have shared \textbf{clients slash patients} countless times and there is kind of a tug-of-war.\footnote{Tags: 2014 SPOK CNN; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4124907\&ID=695011767}}
+    \ex PALIN: I think it's funny that the \textbf{cocktail circuit slash circuit} gives me a hard time for eating elk and moose.\footnote{Tags: 2012	SPOK Fox\_OReilly; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4104129\&ID=660307479}}
+    \ex the thing that has fueled me more than anything in my career is being a \textbf{Canadian slash British} actor\footnote{Tags: 2006	SPOK	CBS\_Morning; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=56186\&ID=546789256}}
+    \ex   we're going to get an exclusive look inside the small box off which \textbf{magician slash contortionist slash performance artist} David Blaine is going to step tomorrow for 44 days.\footnote{Tags: 2003 SPOK ABC\_GMA; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=65391\&ID=547613660}}
+    \ex  I'm going to, for, for my money, for my \textbf{entertainment slash education} dollar, I'm probably going to spend a little bit more time writing\footnote{Tags: 1997	SPOK	NPR\_Sunday; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=248688\&ID=626851374}}
+	\ex This is the kitchen slash washroom.\footnote{Tags: 2007	SPOK	ABC_20/20; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=235116\&ID=603515948}}
+	\ex CHRIS-CUOMO-1-ABC: (Off-camera) I hear that a 20-something-year-old is having some kind of friendship, slash, sexual relationship with another man, what do I think?\footnote{Tags: 2010 (100521) THE MAN WHO HAD ENOUGH; MURDER ROCKS SMALL CALIFORNIA TOWN  SPOK: ABC_20/20; URL: \texttt{corpus.byu.edu/coca/x4.asp?t=4072898\&ID=688401248}}
+	\end{xlista}
+	
+\ex Print media
+   \begin{xlista}
+    \ex	Orange County cities are blocking projects because of \textbf{NIMBYism slash selfishness}.\footnote{Tags: 2015	NEWS	OrangeCR; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4137622\&ID=731859341}}
+    \ex	she was also my \textbf{receptionist slash research assistant} who was darned near becoming a fantastic skiptracer.\footnote{Tags: 2014	FIC	Bk:SeventhGraveNo; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4160521\&ID=768181274}}    
+    \ex	He's a part-time \textbf{bartender slash ski instructor slash mountain guide}, whose most valuable possession is a motorcycle.\footnote{Tags: 2013	FIC	Bk:MountainBetween; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4160988\&ID=767294356}}
+    \ex	I'm not a student-athlete, I'm an \textbf{athlete slash student}.\footnote{Tags: 2003	NEWS	Denver; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=3069798\&ID=221240607}}
+    \ex This may well have been my first taste of \textbf{interracial slash bestial} humor,\footnote{Tags: 2013	FIC	LiteraryRev; URL: \texttt{http://corpus.byu.edu/coca/x4.asp?t=4162603\&ID=756050365}}
+ 	\end{xlista}
+\end{exe}
+
+
+
+\theendnotes
+
+\section*{Acknowledgments}
+
+\small{Thanks to you, the audience of LCUGA 3, for your attention and any comments you might have. Thanks to LSUGA for the Travel Grant Award, which made my participation possible. Thanks to the Syntax Roundtable at UW for comments during preparation.}
+
+
+
+
+\nocite{*} %this is to get all the entries of the sample bibliography; delete this line for an actual Glossa submission
+
+\printbibliography %for use with biblatex; comment out if you use natbib
+%\bibliography{sample} %for use with natbib; uncomment and change 'sample' by the name of your bib-file
+
+
+\end{document}
